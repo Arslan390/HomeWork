@@ -30,4 +30,5 @@ public class LivingDuck extends Duck implements Flyable, Quackable, Replicable, 
     public void swim() {
         System.out.printf("Я живая утка %s, я очень хорошо плаваю \n", getName());
     }
+
 }
