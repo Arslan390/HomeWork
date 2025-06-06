@@ -51,4 +51,36 @@ public class Coin implements Comparable<Coin>{
         }
         return Double.compare(this.diameter, o.diameter);
     }
+
+    public int getNominal() {
+        return nominal;
+    }
+
+    public void setNominal(int nominal) {
+        this.nominal = nominal;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public String getMetalName() {
+        return metalName;
+    }
+
+    public void setMetalName(String metalName) {
+        this.metalName = metalName;
+    }
+
+    public double getDiameter() {
+        return diameter;
+    }
+
+    public void setDiameter(double diameter) {
+        this.diameter = diameter;
+    }
 }
