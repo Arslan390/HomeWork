@@ -9,7 +9,7 @@ public class Main {
 
         coins.add(new Coin(25, 2020, "золото", 10.0));
         coins.add(new Coin(18, 1990, "серебро", 15.0));
-        coins.add(new Coin(14, 2005, "медь", 20.0));
+        coins.add(new Coin(14, 2005, "медь", 10.0));
         coins.add(new Coin(22, 2010, "никель", 12.0));
         coins.add(new Coin(20, 2015, "платина", 8.0));
 
