@@ -1,6 +1,8 @@
 package lesson19.hm;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StringUtilsImpl implements StringUtils {
 
@@ -45,15 +47,11 @@ public class StringUtilsImpl implements StringUtils {
     @Override
     public double[] findNumbers(String text) throws CustomException {
         ArrayList<Double> numbers = new ArrayList<>();
-        String[] words = text.split("\\s+");
+        Pattern pattern = Pattern.compile("\\b\\d+\\.\\d+\\b");
+        Matcher matcher = pattern.matcher(text);
 
-        for (String word : words) {
-            try {
-                double number = Double.parseDouble(word);
-                numbers.add(number);
-            } catch (NumberFormatException e) {
-                // Если строка не может быть преобразована в double, игнорируем её
-            }
+        while (matcher.find()) {
+            numbers.add(Double.parseDouble(matcher.group()));
         }
 
         if (numbers.isEmpty()) {
